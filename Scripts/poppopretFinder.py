@@ -7,9 +7,7 @@ try:
     arg1 = (int(sys.argv[1], base=16))
     arg2 = (int(sys.argv[2], base=16))
     addrSpace = int(arg2) - int(arg1)
-    print(addrSpace)
     opcodes = (pykd.loadBytes(arg1,addrSpace))
-    print(opcodes)
     pop = {0x59,0x5A,0x5D,0x58,0x5E}
     ret = {0xC3}
 
